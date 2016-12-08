@@ -2,10 +2,14 @@
 // ==========
 
 // Compass imports
-
+@import "Compass";
 
 // Core partials
-
+@import "variables";
+@import "mixins";
+@import "base";
+@import "layout";
+@import "modules";
 
 // JS partials
 
