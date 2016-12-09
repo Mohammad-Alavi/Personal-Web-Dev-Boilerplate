@@ -1,17 +1,13 @@
 {
-  "name": "personal-web-dev-boilerplate",
+  "name": "personal-web-dev-template",
   "version": "0.1.0",
   "description": "A personal template of my web development workflow to use as a starting point for other web projects.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "?.git"
+    "url": "https://github.com/Mohammad-Alavi/Personal-Web-Dev-Template.git"
   },
   "keywords": [
-    "boilerplate",
+    "template",
     "workflow",
     "web"
   ],
