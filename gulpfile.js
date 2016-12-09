@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     htmlmin = require('gulp-htmlmin'),
     connect = require('gulp-connect'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    cleanCSS = require('gulp-clean-css');
 
 var env,
     jsSources,
@@ -59,6 +60,7 @@ gulp.task('compass', function () {
             style: sassStyle
         })
         .on('error', gutil.log))
+        .pipe(gulpif(env === 'production', cleanCSS({compatibility: 'ie8'})))
         .pipe(gulp.dest(outputDir + 'css'))
         .pipe(connect.reload())
 });
