@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     htmlmin = require('gulp-htmlmin'),
     connect = require('gulp-connect'),
     imagemin = require('gulp-imagemin'),
-    cleanCSS = require('gulp-clean-css');
+    cleanCSS = require('gulp-clean-css'),
+    cssimport = require("gulp-cssimport");
 
 var env,
     jsSources,
@@ -38,11 +39,11 @@ if (env === 'development') {
     sassStyle = 'compressed';
 }
 // add all the .js files here
-jsSources = ['components/scripts/name1.js'];
+jsSources = ['components/scripts/google_analytics.js'];
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
 
-// all .js files will be concated to one file 'scripts.js'
+// all .js files in scripts folder will be concated to one file 'script.js' in production/js folder
 gulp.task('js', function () {
     gulp.src(jsSources)
         .pipe(concat('script.js'))
@@ -60,6 +61,7 @@ gulp.task('compass', function () {
             style: sassStyle
         })
         .on('error', gutil.log))
+        .pipe(cssimport())
         .pipe(gulpif(env === 'production', cleanCSS({compatibility: 'ie8'})))
         .pipe(gulp.dest(outputDir + 'css'))
         .pipe(connect.reload())
