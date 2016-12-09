@@ -17,10 +17,10 @@ jsSources = [
 npm install --save-dev jquery
 ```
 
-Require JQUERY and such libraries at the top of one of .js files and it will be imported automatically.
+Require JQUERY and such libraries at the top of one of .js files and it will be imported automatically (by browserify).
 #### Example:
 $ = require('jquery');
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information
+The MIT License (MIT). Please see [License File](LICENSE) for more information
