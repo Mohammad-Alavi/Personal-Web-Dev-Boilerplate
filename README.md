@@ -6,7 +6,7 @@ Using (**master** branch):
 - [gulp.js](http://gulpjs.com/) for task automation
 - [normalize.css](https://necolas.github.io/normalize.css/)
 
-You can anything, for example:
+You can use anything, for example:
 - [modernizr.js](https://modernizr.com/) for feature detection
 - [jquery](https://jquery.com/) for better js
 - [bootstrap](http://getbootstrap.com/) for responsive design
