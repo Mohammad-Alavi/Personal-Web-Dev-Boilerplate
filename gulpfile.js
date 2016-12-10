@@ -39,7 +39,7 @@ if (env === 'development') {
     sassStyle = 'compressed';
 }
 // add all the .js files here
-jsSources = ['components/scripts/google_analytics.js'];
+jsSources = ['components/scripts/google_analytics.js', 'components/scripts/require_modules.js'];
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
 

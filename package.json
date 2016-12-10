@@ -25,7 +25,11 @@
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.1.1",
     "gulp-uglify": "^2.0.0",
-    "gulp-util": "^3.0.7",
+    "gulp-util": "^3.0.7"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
     "jquery": "^3.1.1"
   }
 }

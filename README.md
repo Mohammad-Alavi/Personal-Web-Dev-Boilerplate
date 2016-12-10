@@ -1,16 +1,22 @@
 # A Personal Web Development Template
 **A personal template of my web development workflow to use as a starting point for other web projects.**
 
-Using:
+Using (**master** branch):
 - [sass](http://sass-lang.com/) for beter css
 - [gulp.js](http://gulpjs.com/) for task automation
 - [normalize.css](https://necolas.github.io/normalize.css/)
 
-You can use:
+You can anything, for example:
 - [modernizr.js](https://modernizr.com/) for feature detection
 - [jquery](https://jquery.com/) for better js
 - [bootstrap](http://getbootstrap.com/) for responsive design
 - [angular.js](https://angularjs.org/) for better html
+
+## Customized branches detail
+**with_more_flavour** branch is using:
+- [jquery](https://jquery.com/) (full library, not customized)
+- [bootstrap](http://getbootstrap.com/) (full library, not customized)
+    - using the sass version
 
 ## How to costumize
 
