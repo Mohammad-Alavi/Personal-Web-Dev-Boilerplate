@@ -9,7 +9,8 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     imagemin = require('gulp-imagemin'),
     cleanCSS = require('gulp-clean-css'),
-    cssimport = require("gulp-cssimport");
+    cssimport = require("gulp-cssimport"),
+    bootlint  = require('gulp-bootlint');
 
 var env,
     jsSources,
@@ -69,6 +70,12 @@ gulp.task('compass', function () {
 
 gulp.task('html', function () {
     gulp.src('builds/development/*.html')
+        .pipe(bootlint({
+            stoponerror: false,
+            stoponwarning: false,
+            disabledIds: ['W005'],
+            loglevel: 'debug'
+        }))
         // https://github.com/kangax/html-minifier
         .pipe(gulpif(env === 'production', htmlmin({
             collapseWhitespace: true,
