@@ -19,7 +19,7 @@
 // Copy "_bootstrap.scss" into _bootstrap-custom.scss and customize it
 // Comment above @import "bootstrap";
 // Uncomment below @import 'bootstrap-custom';
-// @import 'bootstrap-custom';
+@import 'bootstrap-custom';
 
 // Import any aditional css here and put them into builds/css
 @import "normalize.css";
