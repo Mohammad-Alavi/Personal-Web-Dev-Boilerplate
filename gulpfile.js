@@ -10,7 +10,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     cleanCSS = require('gulp-clean-css'),
     cssimport = require("gulp-cssimport"),
-    bootlint  = require('gulp-bootlint');
+    bootlint = require('gulp-bootlint');
 
 var env,
     jsSources,
@@ -51,7 +51,7 @@ gulp.task('js', function () {
         .pipe(browserify())
         .pipe(gulpif(env === 'production', uglify()))
         .pipe(gulp.dest(outputDir + 'js'))
-        .pipe(connect.reload())
+        .pipe(connect.reload());
 });
 
 gulp.task('compass', function () {
@@ -59,13 +59,14 @@ gulp.task('compass', function () {
         .pipe(compass({
             sass: 'components/sass',
             image: outputDir + 'images',
+            font: outputDir + 'fonts',
             style: sassStyle
         })
-        .on('error', gutil.log))
+            .on('error', gutil.log))
         .pipe(cssimport())
-        .pipe(gulpif(env === 'production', cleanCSS({compatibility: 'ie8'})))
+        .pipe(gulpif(env === 'production', cleanCSS({ compatibility: 'ie8' })))
         .pipe(gulp.dest(outputDir + 'css'))
-        .pipe(connect.reload())
+        .pipe(connect.reload());
 });
 
 gulp.task('html', function () {
@@ -83,20 +84,20 @@ gulp.task('html', function () {
             collapseBooleanAttributes: true,
             removeRedundantAttributes: true,
             removeEmptyAttributes: true,
-            removeScriptTypeAttributes:true,
+            removeScriptTypeAttributes: true,
             removeStyleLinkTypeAttributes: true,
             minifyCSS: true,
             removeComments: true
         })))
         .pipe(gulpif(env === 'production', gulp.dest(outputDir)))
-        .pipe(connect.reload())
+        .pipe(connect.reload());
 });
 
 gulp.task('images', function () {
     gulp.src('builds/development/images/**/*.*')
-    .pipe(gulpif(env === 'production', imagemin()))
-    .pipe(gulpif(env === 'production', gulp.dest(outputDir + 'images')))
-    .pipe(connect.reload())
+        .pipe(gulpif(env === 'production', imagemin()))
+        .pipe(gulpif(env === 'production', gulp.dest(outputDir + 'images')))
+        .pipe(connect.reload());
 });
 
 gulp.task('connect', function () {
@@ -108,7 +109,7 @@ gulp.task('connect', function () {
 
 gulp.task('watch', function () {
     gulp.watch(jsSources, ['js']);
-    gulp.watch('components/sass/*.scss', ['compass']);
+    gulp.watch('components/sass/**/*.scss', ['compass']);
     gulp.watch('builds/development/*.html', ['html']);
     gulp.watch('builds/development/images/**/*.*', ['images']);
 });
