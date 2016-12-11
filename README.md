@@ -11,6 +11,7 @@ You can use:
 - [jquery](https://jquery.com/) for better js
 - [bootstrap](http://getbootstrap.com/) for responsive design
 - [angular.js](https://angularjs.org/) for better html
+- [Respond.js](https://github.com/scottjehl/Respond) to enable media query support for older browsers like IE8
 
 ## How to costumize
 
