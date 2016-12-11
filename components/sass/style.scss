@@ -5,15 +5,8 @@
 @import "compass";
 // @import "compass/reset"
 
-// Core partials
-@import "variables";
-@import "mixins";
-@import "base";
-@import "layout";
-@import "modules";
-
 // Bootstrap.scss FULL (a copy of ../node_modules/bootstrap-sass/stylesheets/bootstrap/_bootstrap.scss)
-@import "bootstrap";
+//@import "bootstrap";
 
 // Bootstrap.scss customized
 // Copy "_bootstrap.scss" into _bootstrap-custom.scss and customize it
@@ -23,3 +16,10 @@
 
 // Import any aditional css here and put them into builds/css
 @import "normalize.css";
+
+// Core partials
+@import "variables";
+@import "mixins";
+@import "base";
+@import "layout";
+@import "modules";
