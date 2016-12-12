@@ -1,7 +1,6 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     concat = require('gulp-concat'),
-    browserify = require('gulp-browserify'),
     compass = require('gulp-compass'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
@@ -40,7 +39,7 @@ if (env === 'development') {
     sassStyle = 'compressed';
 }
 // add all the .js files here
-jsSources = ['components/scripts/google_analytics.js', 'components/scripts/require_modules.js'];
+jsSources = ['components/scripts/jquery.js', 'components/scripts/bootstrap.js', 'components/scripts/google_analytics.js', 'components/scripts/flipclock.js', 'components/scripts/flipclock_script.js'];
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
 
@@ -48,7 +47,6 @@ htmlSources = [outputDir + '*.html'];
 gulp.task('js', function () {
     gulp.src(jsSources)
         .pipe(concat('script.js'))
-        .pipe(browserify())
         .pipe(gulpif(env === 'production', uglify()))
         .pipe(gulp.dest(outputDir + 'js'))
         .pipe(connect.reload());

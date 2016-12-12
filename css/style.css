@@ -10,6 +10,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 @import url(normalize.css);
+@import url(flipclock.css);
 .btn-default,
 .btn-primary,
 .btn-success,
@@ -7595,24 +7596,32 @@ button.close {
     display: none !important;
   }
 }
+.navbar .container-fluid {
+  text-align: center;
+}
 .navbar .navbar-nav {
   display: inline-block;
+  vertical-align: middle;
   float: none;
-  vertical-align: top;
+}
+.navbar .navbar-nav li {
+  float: left;
+  font-weight: bold;
 }
 
 .navbar .navbar-collapse {
   text-align: center;
 }
 
-/*@media (min-width: 768px) {
-    .navbar .navbar-nav {
-        display: inline-block;
-        float: none;
-        vertical-align: top;
-    }
-
-    .navbar .navbar-collapse {
-        text-align: center;
-    }
-}*/
+main {
+  text-align: center;
+}
+main img {
+  max-height: 330px;
+  max-width: 100%;
+  height: auto;
+  padding: 30px;
+}
+main h1, main p {
+  font-weight: bold;
+}
