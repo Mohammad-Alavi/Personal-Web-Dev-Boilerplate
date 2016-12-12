@@ -7625,3 +7625,12 @@ main img {
 main h1, main p {
   font-weight: bold;
 }
+
+article {
+  text-align: center;
+}
+
+.clock {
+  display: inline-block;
+  width: auto;
+}
