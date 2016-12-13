@@ -8,3 +8,12 @@
     clear: both;
   }
 }
+
+/* Gradient transparent - color - transparent */
+@mixin horizontal-seperator($margin: 15px 0 15px 25%, $maxwidth: 50%, $color: rgba(0, 0, 0, 0.4)){
+    @include clearfix;
+    margin: $margin;
+    height: 1px;
+    max-width: $maxwidth;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $color, rgba(0, 0, 0, 0));
+}

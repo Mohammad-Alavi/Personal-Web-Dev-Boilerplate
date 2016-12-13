@@ -1,4 +1,11 @@
 .navbar {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba($color: black, $alpha: 0.2);
+    background-color: white;
+    background-image: none;
+    min-height: auto;
+
     .container-fluid {
     text-align: center;
     }
@@ -6,9 +13,20 @@
         display: inline-block;
         vertical-align: middle;
         float: none;
+        
         li {
             float: left;
             font-weight: bold;
+
+            a {
+                color: black;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
